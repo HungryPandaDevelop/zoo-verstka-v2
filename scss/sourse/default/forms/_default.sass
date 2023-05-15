@@ -1,0 +1,135 @@
+.input-decorate,
+.custom-select
+
+	font-family: "medium"
+	font-size: $standartSize
+	// font-weight: 500
+	resize: none
+	background: none
+	color: $blackColor
+
+	border: 1px solid $grayColor
+	transition: ease-out 0.5s
+
+	border-radius: 0
+	border: 0
+	border-bottom: 1px solid #686868
+	padding-left: 0
+	padding-bottom: 8px
+	padding-top: 8px
+	width: 100%
+	&::placeholder
+		font-family: "regular"
+	&:focus
+		outline: 0
+		// box-shadow: $shadowThree
+.account-item
+	label
+		font-size: 18px
+		position: relative
+.input-animate-label
+	position: relative
+	padding-top: 30px
+	label
+		position: absolute
+		transition: all 0.3s ease
+		top: 34px
+		left: 0px
+		cursor: pointer
+	textarea:focus + label,
+	input:focus + label,
+	.input-empty + label
+		top: 0px
+		opacity: 0.5
+.cabinet-account
+	position: relative
+	.input-decorate,
+	.switch-container
+		margin-left: 40px
+		width: calc(100% - 40px)
+	.input-error
+		border-color: $redColor
+	.input-error-text
+		margin-left: 40px
+.file-decorate-error span,
+.input-error
+	border-color: $redColor
+.mail-error
+	border-color: $orangeColor
+.input-error-text
+	color: $redColor
+	margin-top: 2px
+.form-default
+	h2,h3
+		margin: 0 0 15px
+	b, label
+		display: block
+		margin: 0 0 8px
+		font-size: $standartSize
+	.form-line
+		margin: 0 0 15px
+	button
+		margin: 0 0 15px
+	.btn-container
+		padding-top: 30px
+		.btn
+			margin-right: 30px
+.auth-form
+	padding-left: 18px
+.forgot-password
+	margin-top: 30px
+	padding-left: 30px
+.search-container
+	margin-bottom: 45px
+	position: relative
+	i
+		@include positionElement(30px,30px,0,26px)
+		margin: 4px
+		@include bgImageEl("../images/icons/loop-black.svg")
+	.input-decorate
+		padding-left: 45px
+	.preloader-container
+		@include positionElement(30px,30px,0,0, right)
+		margin: 4px
+	.preloader
+		width: 25px
+		height: 25px
+		left: 0%
+		top: 26px
+	label
+		color: #000
+		padding-left: 45px
+	.input-search-hint
+		margin-top: 5px
+		font-size: 12px
+		color: #000
+		font-family: "medium"
+.rew-switch
+	background-color: rgba($blueColor, 0.1)
+	padding: 15px
+	border-radius: 4px
+	label,
+	.switch-container
+		display: inline-block
+		vertical-align: middle
+	label,
+	b
+		margin: 0
+.search-selects
+	margin-bottom: 45px
+	min-height: 1px
+	b
+		font-size: 14px
+		font-weight: 700
+.cabinet-account .mail-input-box.account-item
+	input
+		@include bgImageEl("../images/icons/e-mail-blue.svg", 23px, 0 6px)
+		padding-left: 38px
+	label
+		padding-left: 80px
+.cabinet-account .pass-input-box.account-item
+	input
+		@include bgImageEl("../images/icons/pass-blue.svg", 23px, 0 6px)
+		padding-left: 38px
+	label
+		padding-left: 80px

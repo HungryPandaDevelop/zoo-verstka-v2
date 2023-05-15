@@ -1,0 +1,86 @@
+$headerHeight: 60px
+.stub
+	height: $headerHeight
+header
+	@include positionElement(100%, $headerHeight, 0, auto, left, top, 5, fixed )
+	color: $whiteColor
+	font-size: $smallSize
+	background-color: $blueColor
+	.main-grid
+		height: 100%
+		position: relative
+	.header-bg
+		@include positionElement(100%,100%,0,0)
+		background-color: $blueColor
+		transition: ease-out 0.25s
+		opacity: 0
+	a
+		text-decoration: none
+		&:hover
+			color: $orangeColor
+	.hamburger-btn
+		margin-left: 30px
+		margin-right: 30px
+	.search-btn
+		margin-left: auto
+	.basket-btn
+		margin-left: auto
+	.header-line
+		@include positionElement(100%, 1px, 0,100%)
+		background-color: $whiteColor
+		transition: ease-out 0.25s
+		display: none
+	&.stick
+		background-color: $blueColor
+		.header-line
+			opacity: 0
+		.header-bg
+			opacity: 1
+.nav-header
+	width: 100%
+	display: flex
+	li
+		margin-right: 15px
+		position: relative
+		i
+			@include icoEl(20px, 20px, "../images/arrows/carret-down-white.svg", middle, 30px)
+			transition: ease-out 0.25s
+		ul
+			@include positionElement(150px,auto,0,100%)
+			margin-left: -8px
+			background-color: $blueColor
+			padding-top: 10px
+			display: none
+			li
+				padding: 4px 8px
+		&:hover
+			ul
+				display: block
+			i
+				transform: rotate(90deg)
+.btn-header-container
+	display: inline-block
+.logo
+	position: relative
+	font-size: 0
+	a
+		margin: auto 0
+
+	img
+		width: 100%
+		max-width: 140px
+.nav-nologged
+	li
+		display: inline-block
+	span
+		display: inline-block
+		margin: 0 8px
+.cabinet-popup-roof
+	display: none
+@media (max-width: 1440px)
+	header
+		.hamburger-btn
+			margin: auto
+@media (max-width: 998px)
+	.cabinet-popup-roof
+		display: block

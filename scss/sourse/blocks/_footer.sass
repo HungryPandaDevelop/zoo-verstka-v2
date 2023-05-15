@@ -1,0 +1,75 @@
+.stub-footer
+  height: 90px
+footer
+  position: relative
+  background-color: $blackColor
+  padding: 60px 0 30px
+  color: $whiteColor
+
+  .main-grid
+    grid-row-gap: 30px
+  ul,
+  li
+    list-style: none
+    margin: 0
+    padding: 0
+
+  nav
+    padding-top: 4px
+    h3
+      color: inherit
+      margin: 0 0 20px
+      font-size: 18px
+  nav li
+    margin: 0 0 10px
+
+  .logo
+    margin: 0 0 15px
+    text-transform: uppercase
+    font-size: $hugeSize
+  .cooperation
+    margin: 0 0 30px
+    b
+      color: inherit
+      display: block
+  .social
+    margin-bottom: 30px
+  a
+    text-decoration: none
+    &:hover
+      color: $orangeColor
+
+  .company
+    margin-bottom: 15px
+  .cooperation
+    b
+      color: inherit
+      display: block
+.footer-info
+  text-align: right
+.contacts-footer-item
+  margin-bottom: 15px
+  i
+    margin-left: -40px
+    margin-right: 10px
+.phone-ico
+  @include icoEl(30px,30px,"../images/icons/phone-white.svg")
+.marker-ico
+  @include icoEl(30px,30px,"../images/icons/marker-white.svg")
+.mail-ico
+  @include icoEl(30px,30px,"../images/icons/mail-white.svg")
+.footer-bottom
+  display: flex
+  justify-content: space-between
+@media (max-width: 992px)
+  footer
+    font-size: 15px
+@media (max-width: 576px)
+  footer
+    .cooperation
+      margin: 0
+  .footer-bottom
+    display: block
+  .footer-info
+    text-align: left
+    margin-bottom: 15px
