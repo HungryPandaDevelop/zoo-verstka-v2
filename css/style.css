@@ -285,6 +285,10 @@ section {
   font-size: 38px;
   padding: 30px 0 15px;
   color: #303030;
+  text-transform: lowercase;
+}
+.content h1::first-letter {
+  text-transform: uppercase;
 }
 
 /*detail end*/
@@ -2672,8 +2676,7 @@ header.stick .header-bg {
   display: flex;
 }
 .nav-header li {
-  margin-right: 15px;
-  position: relative;
+  margin-left: auto;
 }
 .nav-header li i {
   display: inline-block;
@@ -4179,18 +4182,12 @@ footer .cooperation b {
 .cabinet-account .breds-input-cabinet-item textarea {
   margin-left: 0;
 }
-.cabinet-account .breds-input-cabinet-item .file-uploaded-wrapper {
-  padding: 0;
-  margin: 15px 0 0;
-}
-.cabinet-account .breds-input-cabinet-item .file-input-container {
-  margin-left: 0;
-}
-.cabinet-account .breds-input-cabinet-item .switch-container {
-  margin-left: 0;
-}
 .cabinet-account .multy-input .num-offset {
   top: 0;
+}
+.cabinet-account .file-uploaded-wrapper {
+  padding-left: 0;
+  margin-top: 15px;
 }
 
 .comlex-inner-item {
@@ -4229,6 +4226,50 @@ footer .cooperation b {
 }
 .breeds-cabibinet-field-item .breeds-dropzone {
   margin-top: 30px;
+}
+
+.breeds-radio {
+  width: 100%;
+  padding-left: 40px;
+}
+.breeds-radio img {
+  width: 100px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.breeds-radio li {
+  border: 1px solid #C4C4C4;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 4px;
+}
+.breeds-radio li:hover {
+  background-color: rgba(114, 158, 252, 0.2);
+}
+.breeds-radio li.active {
+  background-color: #729EFC;
+  color: #ffffff;
+}
+
+.binding li {
+  border: 1px solid #C4C4C4;
+  border-radius: 4px;
+  padding: 4px 15px;
+  cursor: pointer;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.binding li.active {
+  background-color: #729EFC;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.binding li:hover {
+  border-color: #729EFC;
 }
 
 @media (max-width: 992px) {
@@ -4864,6 +4905,20 @@ footer .cooperation b {
 
 /*-----cabinet-end-----*/
 /*-----breed-start-----*/
+.ico-empty-breed {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/close-black.svg");
+  position: absolute;
+  left: 0;
+  top: 34px;
+  cursor: pointer;
+}
+
 .breed-gallery .image-gallery-content {
   height: 510px;
 }
@@ -5177,6 +5232,7 @@ footer .cooperation b {
   color: #303030;
   font-family: "medium";
   font-size: 16px;
+  text-transform: lowercase;
 }
 .pitomnik-breed-name::first-letter {
   text-transform: uppercase;
@@ -5198,6 +5254,12 @@ footer .cooperation b {
   color: #777;
   font-family: "regular";
   margin-right: 8px;
+}
+.pitomnik-breed-type h3, .pitomnik-breed-type span {
+  text-transform: lowercase;
+}
+.pitomnik-breed-type h3::first-letter, .pitomnik-breed-type span::first-letter {
+  text-transform: uppercase;
 }
 
 .pitomnik-breeds-info {
@@ -5258,6 +5320,9 @@ footer .cooperation b {
   border-right: 1px solid #729EFC;
 }
 
+.cards-item {
+  margin: 0 0 45px;
+}
 .cards-item a {
   text-decoration: none;
 }
@@ -5268,12 +5333,16 @@ footer .cooperation b {
   font-size: 17px;
   font-weight: 400;
   padding: 15px 0 0;
+  text-transform: lowercase;
+}
+.cards-item h3::first-letter {
+  text-transform: uppercase;
 }
 .cards-item h3 a {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  line-clamp: 2;
+  line-clamp: 1;
   position: relative;
   overflow: hidden;
 }
@@ -5307,6 +5376,58 @@ footer .cooperation b {
 .cards-item-img:hover .img-cover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.pitomnik-breed-item {
+  margin-bottom: 30px;
+}
+
+.promo-item {
+  position: relative;
+}
+.promo-item h3::first-letter {
+  text-transform: uppercase;
+}
+
+.promo-item-type {
+  position: absolute;
+  background-color: #A55EFF;
+  font-size: 14px;
+  padding: 0px 15px;
+  left: -5px;
+  top: 40px;
+  color: #ffffff;
+  z-index: 2;
+  border-radius: 6px;
+}
+
+.promo-item-type.anons {
+  background-color: #EC76CB;
+}
+
+.promo-item-type.knit {
+  background-color: #FEAB4A;
+}
+
+.promo-item-type.gift {
+  background-color: #ABE155;
+}
+
+.promo-item-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.promo-item-price {
+  font-size: 18px;
+  color: #729EFC;
+  padding-top: 8px;
+  font-family: "bold";
 }
 
 @media (max-width: 992px) {
@@ -5380,6 +5501,11 @@ footer .cooperation b {
 
 .cards-char-side {
   padding: 0;
+}
+
+.promo-detail-photo {
+  height: 600px;
+  position: relative;
 }
 
 .cards-gallery {
@@ -5524,11 +5650,13 @@ footer .cooperation b {
   min-height: 86px;
 }
 
-.cards-company-contacts h3 {
+.cards-company-contacts h3,
+.promo-info h3 {
   font-size: 18px;
   margin-bottom: 8px;
 }
-.cards-company-contacts li {
+.cards-company-contacts li,
+.promo-info li {
   font-size: 16px;
   color: #303030;
   font-weight: 700;
@@ -5542,28 +5670,53 @@ footer .cooperation b {
   border-bottom: 1px dotted #777;
   margin-bottom: 8px;
 }
-.cards-company-contacts li h3 {
+.cards-company-contacts li h3,
+.promo-info li h3 {
   color: #777;
   font-size: 16px;
   font-family: "regular";
   display: inline-block;
   margin-right: 8px;
 }
-.cards-company-contacts li h3, .cards-company-contacts li span {
+.cards-company-contacts li h3, .cards-company-contacts li span,
+.promo-info li h3,
+.promo-info li span {
   display: inline-block;
   margin-bottom: -4px;
   background-color: #f9f9fa;
 }
-.cards-company-contacts .cards-company-social {
+.cards-company-contacts .cards-company-social,
+.promo-info .cards-company-social {
   border: 0;
   margin-top: 15px;
+  display: block;
 }
-.cards-company-contacts .cards-company-social h3 {
-  margin: 0;
+.cards-company-contacts .cards-company-social h3,
+.promo-info .cards-company-social h3 {
+  margin: 0 0 8px;
+  display: inline-block;
 }
-.cards-company-contacts .cards-company-social .social {
+.cards-company-contacts .cards-company-social .social,
+.promo-info .cards-company-social .social {
   font-size: 0;
-  text-align: right;
+  display: inline-block;
+}
+
+.promo-info-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 45px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.promo-price {
+  font-size: 21px;
+  font-weight: "bold";
+  color: #729EFC;
+  padding-top: 4px;
 }
 
 .detail-bottom {
@@ -5587,6 +5740,9 @@ footer .cooperation b {
 
 .rew-default-container .main-grid {
   padding: 0;
+}
+.rew-default-container .num-offset {
+  display: none;
 }
 .rew-default-container .btn-container {
   display: -webkit-box;

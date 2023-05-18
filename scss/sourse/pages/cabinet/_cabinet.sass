@@ -108,17 +108,12 @@
       margin-left: 0
     textarea
       margin-left: 0
-    .file-uploaded-wrapper
-      padding: 0
-      margin: 15px 0 0
-    .file-input-container
-      margin-left: 0
-    .switch-container
-      margin-left: 0
   .multy-input
     .num-offset
       top: 0
-
+  .file-uploaded-wrapper
+    padding-left: 0
+    margin-top: 15px
 .comlex-inner-item
   position: relative
   .complex-delete-field
@@ -148,6 +143,41 @@
     margin: 0
   .breeds-dropzone
     margin-top: 30px
+.breeds-radio
+  width: 100%
+  padding-left: 40px
+  img
+    width: 100px
+    border-radius: 4px
+    position: relative
+    overflow: hidden
+  li
+    border: 1px solid $grayColorSecond
+    border-radius: 4px
+    padding: 8px
+    cursor: pointer
+    display: inline-block
+    margin-right: 4px
+    &:hover
+      background-color: rgba($blueColor , 0.2 )
+    &.active
+      background-color: $blueColor
+      color: $whiteColor
+.binding
+  li
+    border: 1px solid $grayColorSecond
+    border-radius: 4px
+    padding: 4px 15px
+    cursor: pointer
+    margin-right: 4px
+    margin-bottom: 4px
+    display: inline-block
+    &.active
+      background-color: $blueColor
+      color: $whiteColor
+      border-color: $whiteColor
+    &:hover
+      border-color: $blueColor
 @media (max-width: 992px)
   .cards-face-container
     width: 100%
