@@ -1215,21 +1215,22 @@ section {
   padding-left: 30px;
 }
 
+.search-ico {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/loop-black.svg");
+}
+
 .search-container {
   margin-bottom: 45px;
   position: relative;
 }
 .search-container i {
-  width: 30px;
   position: absolute;
-  height: 30px;
   left: 0;
   top: 26px;
   margin: 4px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("../images/icons/loop-black.svg");
 }
 .search-container .input-decorate {
   padding-left: 45px;
@@ -1238,7 +1239,7 @@ section {
   width: 30px;
   position: absolute;
   height: 30px;
-  right: 0;
+  left: 0;
   top: 0;
   margin: 4px;
 }
@@ -1257,6 +1258,20 @@ section {
   font-size: 12px;
   color: #000;
   font-family: "medium";
+}
+
+.ico-empty-search {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/close-black.svg");
+  position: absolute;
+  left: 4px;
+  top: 34px;
+  cursor: pointer;
 }
 
 .rew-switch {
@@ -1465,6 +1480,16 @@ section {
 }
 .search-field-popup ul li:hover {
   background: #F8F8F8;
+}
+.search-field-popup .ico-empty-search {
+  top: 4px;
+  left: 2px;
+}
+.search-field-popup .search-ico {
+  top: 0;
+}
+.search-field-popup .search-container {
+  margin: 0;
 }
 
 .complex-delete-field {
@@ -4905,20 +4930,6 @@ footer .cooperation b {
 
 /*-----cabinet-end-----*/
 /*-----breed-start-----*/
-.ico-empty-breed {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("../images/icons/close-black.svg");
-  position: absolute;
-  left: 0;
-  top: 34px;
-  cursor: pointer;
-}
-
 .breed-gallery .image-gallery-content {
   height: 510px;
 }
