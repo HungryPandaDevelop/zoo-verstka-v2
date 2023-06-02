@@ -25,9 +25,7 @@
 		font-size: $mediumSize
 		font-weight: 400
 		padding: 15px 0 0
-		text-transform: lowercase
-		&::first-letter
-			text-transform: uppercase
+
 		a
 			display: -webkit-box
 			-webkit-line-clamp: 1
@@ -35,6 +33,9 @@
 			line-clamp: 1
 			position: relative
 			overflow: hidden
+			// text-transform: lowercase
+			&::first-letter
+				text-transform: uppercase
 .cards-item-img
 	height: 250px
 	display: block
@@ -43,6 +44,8 @@
 	border-radius: 30px
 	.img-cover
 		@include positionElement(100%,100%,0,0)
+		background-color: $whiteColor
+		background-size: cover
 		transform: scale(1)
 		transition: ease-out 0.5s
 		background-position: center
@@ -90,3 +93,5 @@
 @media (max-width: 576px)
 	.cards-item-img
 		height: 250px
+	.cards-item
+		margin: 0 0 25px

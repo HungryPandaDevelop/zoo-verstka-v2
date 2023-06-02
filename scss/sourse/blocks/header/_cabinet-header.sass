@@ -1,5 +1,5 @@
 .cabinet-header
-	width: 220px
+	// width: 220px
 	*
 		vertical-align: middle
 
@@ -11,6 +11,11 @@
 	overflow: hidden
 	cursor: pointer
 	border-radius: 100%
+	border: 1px solid $blackColor
+
+.cabinet-header-avatar.empty
+	background-size: 30px
+	background-position: center
 .cabinet-header-nav
 	display: inline-block
 	span
@@ -23,17 +28,15 @@
 	font-size: 0
 	cursor: pointer
 	transition: ease-out 0.5s
-	margin-right: 8px
-	&:hover,
-	&.active
-		background-color: $orangeColor
-		border-color: $orangeColor
-	.sigin-body:hover .sigin-popup
-		opacity: 1
-		visibility: visible
+	i
+		@include icoEl(15px,15px, "../images/arrows/carret-down-black.svg", middle, 30px)
+		margin-right: 8px
+
+.sigin-body
+	position: relative
 
 .cabinet-popup
-	@include positionElement(220px,auto, 32px, 50%, right)
+	@include positionElement(100%,auto, 0px, 50%,)
 	margin-top: 32px
 	background-color: $whiteColor
 	color: $blackColor
@@ -42,9 +45,12 @@
 	// display: none
 	&::before
 		content: ""
-		@include positionElement(10px,10px,30px,-4px,right)
+		@include positionElement(10px,10px,0px,-4px)
 		background-color: $whiteColor
 		transform: rotate(45deg)
+	.btn
+		margin: 0
+		width: 50%
 .cabinet-popup-info
 	padding: 10px 15px 8px
 .cabinet-popup-name
@@ -57,12 +63,14 @@
 .cabinet-popup-controls
 	padding: 15px
 	display: flex
+	gap: 15px
 	justify-content: space-between
 	border-top: 1px solid $grayColorSecond
 	.btn
 		font-size: $smallSize
 		min-width: auto
-		padding: 3px 15px
 @media (max-width: 576px)
 	.cabinet-header
 		width: 184px
+	.cabinet-header-container
+		display: none
