@@ -2,7 +2,7 @@
 $gridCount: 12
 $indent: 15px
 $maxWidth: 1640px
-$gap: 15px
+$gap: 30px
 
 .main-grid
 	display: grid
@@ -23,7 +23,7 @@ $gap: 15px
 .catalog-grid
 	display: grid
 	grid-template-columns: repeat($gridCount, 1fr)
-	gap: 30px $gap
+	gap: 60px $gap
 	padding: 0 $indent
 	max-width: $maxWidth
 	margin: 0 auto
@@ -37,7 +37,7 @@ $gap: 15px
 	.main-full
 		padding: 0
 section
-	padding: 90px 0 30px
+	padding: 60px 0 15px
 	position: relative
 	overflow: hidden
 
@@ -52,7 +52,7 @@ section
 
 	h2
 		font-size: $largeSize
-		margin: 0 0 15px
+		margin: 0 0 0px
 	.back-link
 		margin: auto 0 auto auto
 		text-decoration: none
@@ -63,20 +63,23 @@ section
 	text-align: center
 
 .breadcrumbs
-	font-size: $smallSize
 	padding: 15px 0 15px
 	color: $blackColor
-	border-bottom: 1px solid $blackColor
+	font-weight: 700
 	em, span
 		vertical-align: middle
 	em
-		font-size: 0
+		// font-size: 0
 		// margin-left: 5px
-		@include icoEl(20px, 20px, "../images/arrows/carret-right-gray.svg", middle, 130%)
+		// @include icoEl(20px, 20px, "../images/arrows/carret-right-gray.svg", middle, 130%)
 		vertical-align: middle
 		position: relative
 		top: -1px
-		margin-right: 4px
+		display: inline-block
+		margin: 0 4px
+	span
+		span
+			color: $blueColor
 	a
 		text-decoration: none
 		color: $blackColor
@@ -92,12 +95,15 @@ section
 	position: relative
 	min-height: calc(100vh - 130px)
 	h1
-		font-size: 38px
-		padding: 30px 0 15px
-		color: $blackColor
-		text-transform: lowercase
-		&::first-letter
-			text-transform: uppercase
+		font-size: 48px
+		padding: 30px 0 15px 45px
+		color: $blueColor
+		position: relative
+		&::before
+			content: ''
+			@include positionElement(32px,32px,0,37px)
+			@include bgImageEl("../images/icons/cube-blue.svg")
+
 /*detail end*/
 /*detail end*/
 @media (max-width: 1024px)
