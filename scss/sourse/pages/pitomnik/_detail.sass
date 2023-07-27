@@ -10,61 +10,54 @@
   h3
     display: inline-block
     margin-right: 8px
-
+    font-family: "regular"
+  span
+    font-family: "bold"
 .pitomnik-breed-item-roof
-  display: flex
-  justify-content: space-between
-  padding-bottom: 8px
+  margin: 15px 0
   max-width: 470px
+
 .pitomnik-breed-gender
   color: $blackColor
-  font-family: 'medium'
-  font-size: 16px
-.pitomnik-breed-name
-  margin-right: auto
-  margin-left: 8px
-  color: $blackColor
-  font-family: 'medium'
-  font-size: 16px
-  text-transform: lowercase
-  &::first-letter
-    text-transform: uppercase
-.pitomnik-breed-type
-  color: $blackColor
-  font-family: 'medium'
-  font-size: 16px
-  display: flex
-  justify-content: space-between
+  font-family: 'bold'
 
-  h3
-    font-size: inherit
-    color: $grayColor
+.pitomnik-breed-name
+  margin-left: 8px
+  font-family: 'regular'
+.pitomnik-breed-type
+  margin-top: 0px
+  color: $blackColor
+  b
+    margin-left: 8px
     font-family: 'regular'
-    margin-right: 8px
-  h3,span
-    text-transform: lowercase
-    &::first-letter
-      text-transform: uppercase
+  span
+    font-family: 'bold'
 .pitomnik-breeds-info
   margin-top: 15px
   margin-bottom: 15px
-  font-size: 15px
+
   h3
     font-size: inherit
-    color: $grayColor
     font-family: 'regular'
   span
     color: $blackColor
     font-family: 'medium'
+  .link
+    color: rgba(35, 31, 32, 0.50)
+    font-family: 'regular'
   li
     display: flex
     justify-content: space-between
-    border-bottom: 1px $grayColor dotted
-    margin-bottom: 8px
+
+    margin-bottom: 4px
     h3,span
       margin-bottom: -4px
       display: inline-block
-      background-color: #f9f9fa
+  .extra-line
+    display: block
+    h4
+      font-family: 'bold'
+      font-size: 21px
 @media (max-width: 576px)
   .cards-company-info
     margin: 30px 0

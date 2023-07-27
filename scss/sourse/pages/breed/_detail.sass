@@ -18,12 +18,11 @@ $borderSize: calc(100% - 58px)
     .btn
       width: 100%
 .breed-adv-item
-  display: flex
 
   h3
     font-size: $standartSize
     margin: 0 0 0px
-    color: $grayColor
+    color: $blackColor
     font-family: "medium"
     // font-family: "semiBold"
     // font-family: "light"
@@ -36,7 +35,7 @@ $borderSize: calc(100% - 58px)
 
   // margin-top: 45px
   h2
-    font-size: 28px
+    font-size: 24px
   h3
     font-size: 18px
     color: $blackColor
@@ -56,13 +55,10 @@ $borderSize: calc(100% - 58px)
 $widthImg: 60px
 .breed-adv-item-img
   width: $widthImg
-  display: flex
   img
-    width: 50px
-    height: 50px
+    width: 35px
+    height: 35px
     border-radius: 0
-.breed-adv-item-info
-  width: calc(100% - $widthImg)
 .breed-description-roof
   // display: flex
   // justify-content: space-between
@@ -124,21 +120,19 @@ $widthImg: 60px
   // grid-column: span 1
   position: relative
   padding-left: 80px
-  padding-top: 12px
-  padding-bottom: 15px
+  padding-bottom: 30px
   margin-bottom: 0px
-  border-bottom: 1px solid $grayColorSecond
   img
     @include positionElement(50px,50px,0,0)
   &:last-child
     border: 0
 .breedsNav
-  border: 2px solid $blueColor
-  padding: 15px
+  padding: 30px
   border-radius: 30px
   background-color: $whiteColor
   position: sticky
   top: 70px
+  box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.25)
   span
     cursor: pointer
     text-decoration: none

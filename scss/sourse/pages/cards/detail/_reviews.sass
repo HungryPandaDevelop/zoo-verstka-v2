@@ -45,7 +45,7 @@
   margin-top: 45px
   h2
     font-weight: 400
-    font-size: 28px
+    font-size: 24px
     margin: 0 0 30px
   .form-btn-container
     text-align: right
@@ -110,22 +110,26 @@
   margin: 0 0 0px
   display: flex
   justify-content: space-between
+  color: $grayColor
   label
     margin: 0
 .reviews-date
   margin-left: auto
 .star-ico
   display: inline-block
-  @include icoEl(16px, 16px, '../images/icons/star-yellow.svg')
+  @include icoEl(16px, 16px, '../images/icons/star-blue.svg')
   cursor: pointer
   &.active,
   &:hover
-    background-image: url("../images/icons/star-fill-yellow.svg")
-.star-ico--green
-  background-image: url("../images/icons/star-blue.svg")
-  &:hover,
-  &.active
     background-image: url("../images/icons/star-fill-blue.svg")
+.star-ico--green
+  display: inline-block
+  @include icoEl(16px, 16px, '../images/icons/star-black.svg')
+  cursor: pointer
+  &.active,
+  &:hover
+    background-image: url("../images/icons/star-fill-black.svg")
+
 .input-stars
   position: absolute
   opacity: 0

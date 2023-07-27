@@ -15,6 +15,15 @@
 	@include icoEl(32px,32px, "../images/icons/basket-white.svg")
 	&:hover
 		background-image: url("../images/icons/basket-orange.svg")
+
+.top-btn
+	background-color: $blueColor
+	@include positionElement(60px,60px,30px, 60px, right, bottom, 2, fixed)
+	@include bgImageEl("../images/arrows/carret-up-white.svg", 60px)
+	cursor: pointer
+	border-radius: 100%
+	&:hover
+		background-color: $blueColorSecond
 .btn-back
 	&:hover
 		color: $greenColor
@@ -54,10 +63,10 @@
 			background-image: url("../images/cabinet/cabinet-add-cards-blue.svg")
 .btn-add
 	i
-		@include icoEl(20px,20px, "../images/cabinet/cabinet-add-cards-white.svg")
+		@include icoEl(20px,20px, "../images/cabinet/cabinet-add-cards-blue.svg")
 	&:hover
 		i
-			background-image: url("../images/cabinet/cabinet-add-cards-blue.svg")
+			background-image: url("../images/cabinet/cabinet-add-cards-white.svg")
 .btn-header
 	display: inline-block
 	border: 1px solid $whiteColor

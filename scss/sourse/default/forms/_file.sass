@@ -27,7 +27,7 @@
 	// width: 100%
 	// background: none
 	color: $blackColor
-	@include icoEl(120px, 90px, "../images/icons/file-upload-gray.svg")
+	@include icoEl(120px, 90px, "../images/icons/file-upload-gray-2.svg")
 	// border-radius: 30px
 	// box-shadow: $shadowFive
 	// border: 1px solid $whiteColor
@@ -36,9 +36,9 @@
 		// padding-left: 25px
 		// position: relative
 		// display: block
-		font-size: $smallSize
-		text-align: center
-		@include positionElement(100%, auto, 0, 105%)
+		font-size: 20px
+		color: $grayColor
+		@include positionElement(100%, auto, 130px, 20px)
 		// &::before
 		// 	content: ""
 		// 	@include positionElement(20px, 20px, 0, 2px)
@@ -66,36 +66,39 @@
 	display: block
 .hint-input-file
 	display: inline-block
-	position: absolute
-	left: 100%
-	top: 0
-	margin-left: 30px
+
+	margin: 0 0 8px
+	// position: absolute
+	// left: 100%
+	// top: 0
+	// margin-left: 30px
 	// display: none
 	span
-		background-color: #e8e8e8
-		padding: 5px
-		border-radius: 4px
+		// background-color: #e8e8e8
+		// padding: 5px
+		// border-radius: 4px
 		font-size: $smallSize
 		display: inline-block
 		vertical-align: middle
-		position: absolute
-		width: 520px
-		left: 100%
-		top: 0%
-		transform: translateY(-46%)
-
-		&::before
-			content: ""
-			@include positionElement(10px, 10px, -6px,70%)
-			margin-top: -5px
-			transform: rotate(45deg)
-			background-color: #e8e8e8
-	i
-		border-radius: 100%
-		background-color: $greenColor
-		@include icoEl(20px, 20px, "../images/icons/info-white.svg")
-		margin-right: 15px
 		font-style: normal
+		// position: absolute
+		// width: 520px
+		// left: 100%
+		// top: 0%
+		// transform: translateY(-46%)
+
+		// &::before
+		// 	content: ""
+		// 	@include positionElement(10px, 10px, -6px,70%)
+		// 	margin-top: -5px
+		// 	transform: rotate(45deg)
+		// 	background-color: #e8e8e8
+	// i
+	// 	border-radius: 100%
+	// 	background-color: $greenColor
+	// 	@include icoEl(20px, 20px, "../images/icons/info-white.svg")
+	// 	margin-right: 15px
+	// 	font-style: normal
 .file-uploaded
 	position: relative
 	font-size: 0
@@ -119,10 +122,10 @@
 	margin-top: 18px
 	width: 120px
 	margin-bottom: 60px
-	margin-left: 40px
+	// margin-left: 40px
 	&:hover
 		.file-decorate
-			background-image: url("../images/icons/file-upload-blue.svg")
+			background-image: url("../images/icons/file-upload-blue-2.svg")
 			color: $blueColor
 /*-file-upload-*/
 
@@ -222,14 +225,19 @@
 	padding-left: 40px
 .dragdrop-container
 	position: relative
-	margin: 15px 0 30px 40px
-	width: calc(100% - 50px)
+	margin: 15px 0 30px 0px
+	// width: calc(100% - 50px)
+	width: 100%
 	padding: 15px
 	min-height: 90px
-	border: 2px dashed $grayColorSecond
-	background-color: rgba($blueColor, 0.1)
+	border: 1px dashed $grayColor
+	// background-color: rgba($blueColor, 0.1)
+	background: rgba(114, 158, 252, 0.1)
+	// border: 1px dashed rgba(51, 50, 50, 0.5)
 	display: flex
 	border-radius: 15px
+	color: $blackColor
+	font-family: "bold"
 	span
 		display: inline-block
 		margin: auto

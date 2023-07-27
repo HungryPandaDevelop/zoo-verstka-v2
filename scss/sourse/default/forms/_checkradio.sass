@@ -22,21 +22,21 @@
 		opacity: 0
 
 		&:checked~span
-			border-color: $blueColor
+			// border-color: $blueColorh
 			&:after
 				display: block
 		&:checked~em
 			color: $blueColor
 
 	span
-		@include positionElement(20px, 20px, 0px, 6px)
-		border: 1px solid #828282
+		@include positionElement(22px, 22px, 0px, 4px)
+		border: 1px solid $blackColor
 		border-radius: 100%
 		transition: ease-out 0.5s
 		cursor: pointer
 		&:after
 			content: ""
-			@include positionElement(8px, 8px, 5px, 5px)
+			@include positionElement(16px, 16px, 2px, 2px)
 			background-color: $blueColor
 			border-radius: 100%
 			display: none

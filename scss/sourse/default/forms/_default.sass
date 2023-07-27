@@ -7,13 +7,13 @@
 	resize: none
 	background: none
 	color: $blackColor
-
-	border: 1px solid $grayColor
+	border: 0
+	border-bottom: 1px solid $grayColor
 	transition: ease-out 0.5s
 
-	border-radius: 30px
-	padding-left: 15px
-	padding-bottom: 4px
+	border-radius: 0px
+	padding-left: 0px
+	padding-bottom: 10px
 	padding-top: 5px
 
 	width: 100%
@@ -22,6 +22,12 @@
 	&:focus
 		outline: 0
 		// box-shadow: $shadowThree
+textarea.input-decorate
+	border: 1px solid $grayColor
+	border-radius: 15px
+	height: 150px
+	background-color: rgba($whiteColor, 0.3 )
+	padding: 15px
 .account-item
 	label
 		font-size: 18px
@@ -44,8 +50,9 @@
 	position: relative
 	.input-decorate,
 	.switch-container
-		margin-left: 40px
-		width: calc(100% - 40px)
+		width: 100%
+		// margin-left: 40px
+		// width: calc(100% - 40px)
 	.input-error
 		border-color: $redColor
 	.input-error-text
@@ -109,8 +116,7 @@
 		font-size: 12px
 		color: #000
 		font-family: "medium"
-.search-field-input
-	margin-bottom: 8px
+
 .ico-empty-search
 	display: inline-block
 	width: 20px
@@ -120,10 +126,12 @@
 	left: 4px
 	top: 34px
 	cursor: pointer
+.title-rew-small
+	display: inline-block
+.rew-default-container
+	h3
+		margin-bottom: 15px
 .rew-switch
-	background-color: rgba($blueColor, 0.1)
-	padding: 15px
-	border-radius: 4px
 	label,
 	.switch-container
 		display: inline-block
@@ -131,10 +139,12 @@
 	label,
 	b
 		margin: 0
-
+.title-rew-name
+	display: inline-block
+	margin-left: 30px
 .cabinet-account .mail-input-box.account-item
 	input
-		@include bgImageEl("../images/icons/e-mail-blue.svg", 23px, 0 6px)
+		@include bgImageEl("../images/icons/e-mail-blue.svg", 23px, 0 4px)
 		padding-left: 38px
 	label
 		padding-left: 80px
