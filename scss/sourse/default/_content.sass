@@ -61,7 +61,6 @@ section
 .breadcrumbs
 	padding: 15px 0 15px
 	color: $blackColor
-	font-weight: 700
 	em, span
 		vertical-align: middle
 	em
@@ -110,8 +109,11 @@ section
 @media (max-width: 576px)
 	.content h1
 		font-size: 20px
+		padding: 9px 0 20px 45px
+		line-height: 1
 		&::before
-			top: 26px
+			top: 11px
+
 	section
 		.title-section
 			font-size: $largeSize
@@ -121,6 +123,8 @@ section
 			margin: 0 0 15px
 	.breadcrumbs
 		padding: 8px 0 8px
+		font-size: 14px
+
 	.content
 		min-height: calc(100vh - 270px)
 

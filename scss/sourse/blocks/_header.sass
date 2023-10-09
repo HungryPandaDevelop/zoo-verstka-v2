@@ -39,6 +39,21 @@ header
 			opacity: 0
 		.header-bg
 			opacity: 1
+.scroll-top-box
+	@include positionElement(60px,60px,0,30px, right, bottom, 2, fixed, flex)
+	background-color: #fff
+	border-radius: 15px 0 0 15px
+	box-shadow: 0 0 15px rgba($blackColor , 0.3)
+.scroll-top
+	margin: auto
+	width: 38px
+	height: 38px
+	border: 2px solid $blueColor
+	border-radius: 100%
+	@include bgImageEl("../images/arrows/carret-up-blue.svg")
+	cursor: pointer
+	transition: ease-out 0.5s
+
 .nav-header
 	width: 100%
 	display: flex
@@ -89,6 +104,9 @@ header
 	.cabinet-popup-roof
 		display: block
 @media (max-width: 576px)
+	.stub
+		height: 60px
+
 	header
 		height: 70px
 		.hamburger-btn

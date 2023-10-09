@@ -100,6 +100,8 @@ $widthImg: 60px
   font-size: 14px
   margin-bottom: 15px
   grid-column: span 4
+  &:last-child
+    margin-bottom: 0
 .project-img-border
   transition: ease-out 0.5s
   @include positionElement($borderSize, $borderSize, 30px, 30px, left, top, 2)
@@ -175,7 +177,6 @@ $widthImg: 60px
       margin-bottom: 15px
 @media (max-width: 576px)
   .breed-description-roof-content
-    text-align: center
     h2
       span
         display: block
@@ -184,7 +185,7 @@ $widthImg: 60px
   .breed-description-text
     margin-left: 0
   .breed-description
-    text-align: center
+
   .breed-adv
     .btn-container
       margin-top: 30px
@@ -193,3 +194,15 @@ $widthImg: 60px
   .breed-description
     h2
       font-size: 17px
+      margin: 0
+  .breed-traits
+    .traits-item
+      padding-left: 0
+      padding-bottom: 10px
+      text-align: left
+      padding-top: 12px
+    h3
+      padding-left: 60px
+      padding-bottom: 12px
+    img
+      border-radius: 0
